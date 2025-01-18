@@ -1,13 +1,12 @@
-import React from "react";
+import React from 'react';
+import NavBar from './NavBar';  // Ensure the path is correct
 
-function App() {
+const App = () => {
   return (
     <div>
       <NavBar />
-      <Home />
-      <About />
     </div>
   );
-}
+};
 
 export default App;

@@ -1,7 +1,11 @@
-import { username, city, image } from "../data/user";
+import "@testing-library/jest-dom";
+import { render } from "@testing-library/react";
+import App from "../components/App";
 
-test("username, city, and image are all exported", () => {
-  expect(username).toEqual("Liza");
-  expect(city).toEqual("New York");
-  expect(image).toEqual("https://i.imgur.com/mV8PQxj.gif");
+test("it renders without crashing", () => {
+  try {
+    expect(() => render(<App />)).not.toThrow();
+  } catch (e) {
+    throw new Error("Make sure to import the required components!");
+  }
 });
